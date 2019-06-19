@@ -2,22 +2,15 @@
         /   /   \  /   \
        /   /      /
       /    \___/  \___/
-
- Date:
  Name:
- Project Description:
+ Date:
+ Project Description: 
  Inputs:
  Outputs:
-*/
-//*************************************************************
-
+//**************************************************************/
 #include <iostream>
-#include <string>
+using namespace std;
 
-using namespace std; //introduces namespace std
-
-int main ( void )
-{
- 
-    return 0;
+int main() {
+	return 0;
 }
