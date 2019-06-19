@@ -18,7 +18,7 @@ using namespace std;
 
 int main(int argc, char** argv) {
 	double rads, A = 10.0, B, H;
-	const string line = "|---------------------------------|\n";
+	const string line = "|-----------------------------------|\n";
 
 	/*    |\
 	      | \
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 	       A = 10 */
 	cout << fixed << right << setprecision(2)
 		<< line
-		<< "|Theta (degrees) |  B (m) |  H (m)|\n"
+		<< "| Theta (degrees) |  B (m) |  H (m) |\n"
 		<< line;
 	
 	// Solves for B and H from 5 to 85 degrees, outputs as formatted table
@@ -40,9 +40,9 @@ int main(int argc, char** argv) {
 		H = A / cos(rads);
 		
 		cout << "|"
-			<< setw(8) << theta << setw(9) << "|"
+			<< setw(9) << theta << setw(9) << "|"
 			<< setw(7) << B << " |"
-			<< setw(7) << H << "|" << endl;
+			<< setw(7) << H << " |" << endl;
 	}
 	cout << line;
 	return 0;
