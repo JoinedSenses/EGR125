@@ -4,9 +4,10 @@
       /    \___/  \___/
  Name: Arron Vinyard
  Date: June 19, 2019
- Project Description: 
- Inputs:
- Outputs:
+ Project Description: Outputs a range of conversions between
+   feet and meters as a formatted table
+ Inputs: None
+ Outputs: Formatted table of conversions
 //**************************************************************/
 #include <iostream>
 #include <iomanip>
