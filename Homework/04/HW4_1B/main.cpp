@@ -14,27 +14,26 @@
 #include <cmath>
 using namespace std;
 
-// Returns pi/2 to n digits and number of terms needed
-double halfPiToNDigits(int, int&);
+// Returns pi/2 to 6 decimal precision and number of terms
+double halfPi(int&);
 
 int main() {
-	int terms;
+	int terms = 0;
 	double result1, result2;
 	cout << fixed << setprecision(10);
 	
-	// Not much happening here besides printing results
+	// Output results
 	result1 = acos(-1)/2;
+	result2 = halfPi(terms);
 	cout << "Pi using acos(-1):         " << result1 << endl;
-	
-	result2 = halfPiToNDigits(7, terms);
 	cout << "Pi to 6 decimal precision: " << result2 << " | Terms: " << terms << endl;
 	cout << "Difference:                " << result1-result2 << endl;
 	
 	return 0;
 }
 
-double halfPiToNDigits(int n, int &terms) {
-	double product = 1.0, result = 1.0, numerator = 1.0, precision = pow(10, -n);
+double halfPi(int &terms) {
+	double product = 1.0, result = 1.0, numerator = 1.0, precision = pow(10, -7);
 	int denominator = 3, count = 1;
 	
 	// result = 1 + 1/3 + (1*2)/(3*5) + (1*2*3)/(3*5*7) + ...
