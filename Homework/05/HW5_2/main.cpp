@@ -8,7 +8,7 @@
    feet and meters as a formatted table
  Inputs: None
  Outputs: Formatted table of conversions
-//**************************************************************/
+**************************************************************/
 #include <iostream>
 #include <iomanip>
 using namespace std;
