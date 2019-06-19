@@ -7,7 +7,7 @@
  Project Description: Outputs the sum of all digits in a long int via function
  Inputs: Long integer
  Outputs: Sum of each digit in the long integer
-//**************************************************************/
+**************************************************************/
 #include <iostream>
 using namespace std;
 
