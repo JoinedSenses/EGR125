@@ -35,7 +35,7 @@ int main() {
 
 double halfPiToNDigits(int n, int &terms) {
 	double product = 1.0, result = 1.0, numerator = 1.0, precision = pow(10, -n);
-	int denominator = 3, count = 0;
+	int denominator = 3, count = 1;
 	
 	// result = 1 + 1/3 + (1*2)/(3*5) + (1*2*3)/(3*5*7) + ...
 	// terms:   1    2         3               4          ...
