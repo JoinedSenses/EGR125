@@ -1,0 +1,4 @@
+﻿  HW1_3C.cpp
+G:\Documents\Apprentice School\EGR 125 Intro to Engineering Methods\Homework\1\HW1_3C\HW1_3C.cpp(21): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+G:\Documents\Apprentice School\EGR 125 Intro to Engineering Methods\Homework\1\HW1_3C\HW1_3C.cpp(25): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  HW1_3C.vcxproj -> G:\Documents\Apprentice School\EGR 125 Intro to Engineering Methods\Homework\1\HW1_3C\Debug\HW1_3C.exe

@@ -1,0 +1,23 @@
+/*     ____   __     __
+        /   /   \  /   \
+       /   /      /
+      /    \___/  \___/
+
+ Date:
+ Name:
+ Project Description:
+ Inputs:
+ Outputs:
+*/
+//*************************************************************
+
+#include <iostream>
+#include <string>
+
+using namespace std; //introduces namespace std
+
+int main ( void )
+{
+ 
+    return 0;
+}
