@@ -16,7 +16,7 @@ int main() {
 	double a, b, c, A, B, C;
 	cout << "Enter length of three sides of the triangle (a, b, c):" << endl;
 	cin >> a >> b >> c;
-	if (triangle_AreSidesValid(a, b, c) {
+	if (triangle_AreSidesValid(a, b, c)) {
 		triangle_SolveAngles(a, b, c, A, B, C);
 	}
 	else {
@@ -24,8 +24,8 @@ int main() {
 		return 0;
 	}
 	
-	cout << "Side A: " << A << " degrees." << endl;
-		<< "Side B: " << B << " degrees." << endl;
+	cout << "Side A: " << A << " degrees." << endl
+		<< "Side B: " << B << " degrees." << endl
 		<< "Side C: " << C << " degrees." << endl;
 	
 	return 0;
@@ -38,6 +38,7 @@ bool triangle_AreSidesValid(double a, double b, double c) {
 		return false;
 	}
 	return (a < b + c && b < a + c && c < a + b);
+}
 
 void triangle_SolveAngles(double a, double b, double c, double &A, double &B, double &C) {
 	A = acos((b * b + c * c - a * a) / (2 * b * c)) * 180 / M_PI;
