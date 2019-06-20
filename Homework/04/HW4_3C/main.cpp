@@ -8,7 +8,7 @@
    mile and kilometer conversions
  Inputs: None
  Outputs: Two tables, side by side
-//**************************************************************/
+**************************************************************/
 #include <iostream>
 #include <iomanip>
 using namespace std;
