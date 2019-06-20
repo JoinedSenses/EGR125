@@ -47,5 +47,5 @@ int main() {
 }
 
 double Poly(double x, double A0, double A1, double A2, double A3, double A4, double A5) {
-	return A0 + A1*x+A2*pow(x,2)+A3*pow(x,3)+A4*pow(x,4)+A5*pow(x,5);
+	return A0 + A1*x + A2*pow(x,2) + A3*pow(x,3) + A4*pow(x,4) + A5*pow(x,5);
 }
