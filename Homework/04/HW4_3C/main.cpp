@@ -17,6 +17,7 @@ int main() {
 	int i, j;
 	cout << fixed << setprecision(3) << left
 		<< "Miles  Kilometers | Kilometers  Miles\n";
+	
 	// Output two formatted conversion tables, side by side
 	for (i = 1, j = 20; i < 11; i++, j+=5) {
 		cout << setw(7) << i << setw(11) << i * 1.609 << "| "
