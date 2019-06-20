@@ -11,6 +11,8 @@
 #include <iostream>
 using namespace std;
 
+// Prints a range of characters between char1 and char2,
+// displaying n chars per line.
 void printChars(char, char, int = 10);
 
 int main() {
