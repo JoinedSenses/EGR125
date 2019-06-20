@@ -24,14 +24,13 @@ double kmToMile(double km) {
 // ====
 
 int main() {
-	int i, j = 20;
+	int i, j;
 	cout << fixed << setprecision(3) << left
 		<< "Miles  Kilometers | Kilometers  Miles\n";
 	// Output two formatted conversion tables, side by side
-	for (i = 1; i < 11; i++) {
+	for (i = 1, j = 20; i < 11; i++, j+=5) {
 		cout << setw(7) << i << setw(11) << mileToKm(i) << "| "
 			<< setw(12) << j << kmToMile(j) << endl;
-		j+=5;
 	}
 	return 0;
 }
