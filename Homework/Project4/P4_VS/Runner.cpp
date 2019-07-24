@@ -204,11 +204,14 @@ void Runner::EnterRun() {
 		}
 	} while (invalid);
 	cout << endl;
-	DisplayRunResults();
 
+	displayHeader();
+	DisplayRunResults();
+	displayLine(61);
+
+	cout << "Would you like to save this run? [Y/N]: ";
 	do { // Prompt to save
 		invalid = false;
-		cout << "Would you like to save this run? [Y/N]: ";
 		cin >> input; clearcin();
 		switch (tolower(input)) {
 			case 'y':
@@ -217,7 +220,6 @@ void Runner::EnterRun() {
 			case 'n':
 				break;
 			default:
-				cout << "Invalid input." << endl;
 				invalid = true;
 		}
 	} while (invalid);
@@ -243,15 +245,10 @@ void Runner::FindAverage() {
 }
 
 // Displays current run
-void Runner::DisplayRunResults(bool summary) {
+void Runner::DisplayRunResults() {
 	if (!isLoggedIn) {
 		cout << "No user is logged in." << endl;
 		return;
-	}
-
-	// If this isn't displayed via summary, display header/footer
-	if (!summary) { 
-		displayHeader();
 	}
 
 	FindAverage();
@@ -260,10 +257,6 @@ void Runner::DisplayRunResults(bool summary) {
 		<< setw(16) << setprecision(2) << Distance
 		<< setw(12) << fmtTime()
 		<< fmtTime(Average) << endl;
-
-	if (!summary) {
-		displayLine(61);
-	}
 }
 
 // Displays all run results if they exist
@@ -281,6 +274,7 @@ void Runner::Summary() {
 	in.open(Filename.c_str());
 	if (in.fail()) {
 		cout << "Unable to open profile." << endl;
+		in.close();
 		return;
 	}
 
@@ -290,7 +284,7 @@ void Runner::Summary() {
 		hasContents = true;
 		totalSeconds += timeToSecs(Hours, Minutes, Seconds);
 		totalMiles += Distance;
-		DisplayRunResults(true);
+		DisplayRunResults();
 	}
 	in.close();
 
@@ -345,6 +339,22 @@ string Runner::fmtTime(double min) {
 	return stream.str();
 }
 
+// Displays header for run summaries
+void Runner::displayHeader() {
+	cout << left << setw(15) << "Date"
+		<< setw(16) << "Distance (mi)"
+		<< setw(12) << "Time"
+		<< "Average (min/mile)\n";
+	displayLine(61);
+}
+
+// Outputs n number of '-'s to a line
+void Runner::displayLine(int n) {
+	for (size_t i = 0; i < n; i++) {
+		cout << '-';
+	} cout << endl;
+}
+
 // Clears cin for controlled input
 void clearcin() {
 	cin.clear();
@@ -361,20 +371,4 @@ void fmtStr(string& str) {
 
 int timeToSecs(int H, int M, int S) {
 	return H * 3600 + M * 60 + S;
-}
-
-// Displays header for run summaries
-void Runner::displayHeader() {
-	cout << left << setw(15) << "Date"
-		<< setw(16) << "Distance (mi)"
-		<< setw(12) << "Time"
-		<< "Average (min/mile)\n";
-	displayLine(61);
-}
-
-// Outputs n number of '-'s to a line
-void Runner::displayLine(int n) {
-	for (int i = 0; i < n; i++) {
-		cout << '-';
-	} cout << endl;
 }

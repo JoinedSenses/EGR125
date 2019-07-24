@@ -4,14 +4,14 @@ using namespace std;
 
 class Runner {
 private:
-	std::string First, Last, Filename;
+	string First, Last, Filename;
 	int Hours, Minutes, Seconds, Month, Day, Year;
 	double Distance, Average;
 	bool isLoggedIn;
 	string fmtDate();
 	string fmtTime(), fmtTime(int secs), fmtTime(double min);
 	void displayHeader();
-	void displayLine(int count);
+	void displayLine(int n);
 	void clear();
 public:
 	Runner() { clear(); };
@@ -19,7 +19,7 @@ public:
 	void Logout();
 	void EnterRun();
 	void FindAverage();
-	void DisplayRunResults(bool summary = false);
+	void DisplayRunResults();
 	void Summary();
 };
 

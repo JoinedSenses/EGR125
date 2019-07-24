@@ -19,7 +19,7 @@ public:
 	void Logout();
 	void EnterRun();
 	void FindAverage();
-	void DisplayRunResults(bool summary = false);
+	void DisplayRunResults();
 	void Summary();
 };
 

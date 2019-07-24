@@ -1,2 +1,5 @@
-﻿  Runner.cpp
+﻿  P4.cpp
+  Runner.cpp
+  Generating Code...
+G:\Documents\Apprentice School\TCC\EGR 125 Intro to Engineering Methods\Homework\Project4\P4_VS\Runner.cpp(353,23): warning C4018:  '<': signed/unsigned mismatch
   P4.vcxproj -> G:\Documents\Apprentice School\TCC\EGR 125 Intro to Engineering Methods\Homework\Project4\P4_VS\Debug\P4.exe
